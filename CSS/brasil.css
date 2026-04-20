@@ -1,0 +1,367 @@
+:root {
+    --marrom: #503d2e;
+    --amarelo: #e3a72f;
+    --amarelo-ouro: #ffbe40 ;
+    --areia: #f0ecc9;
+    --verde-medio: #b3cc57;
+    --verde-claro: #ecf081 ;
+    --verde: #94ba65;
+    --verde1: #3f9f33;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--areia);
+    color: var(--marrom);
+    line-height: 1.6;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    padding: 25px 0;
+    background: var(--verde1);
+}
+
+.logo {
+    display: flex;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 20px;
+    color: var(--verde-claro);
+    gap: 10px;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+/* diferença de cor */
+.logo span { 
+    color: #fff; 
+}
+
+/* edição do menu */
+.nav {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    letter-spacing: 2px;
+
+}
+
+.nav a {
+    text-decoration: none;
+    padding: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--verde-claro);
+}
+
+.nav a:hover {
+    color: #eec925;
+}
+
+.hero {
+    height: 90vh;
+    background-image: linear-gradient(#94ba6546, #f0ecc9), url('img/Brazil.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    text-align: center;
+    color: white;
+}
+
+.hero h1 { 
+    font-size: 3rem; 
+    margin-bottom: 10px; 
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.destino-content h2 {
+    color: var(--verde1);
+    margin: 20px 0;
+    text-align: center;
+}
+
+
+.destino-content h4 {
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* centraliza todo o conteúdo na página */
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.destino {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+/* EFEITO ZIGUEZAGUE:*/
+
+.destino:nth-child(even) {
+    flex-direction: row-reverse;
+    text-align: left;
+}
+
+.destino:nth-child(odd) {
+    text-align: right;
+}
+
+.text-block {
+    flex: 1;
+}
+
+.text-block span {
+    color: #008080;
+    font-weight: bold;
+}
+
+.text-block h2 {
+    color: var(--verde1);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.image-block {
+    flex: 1;
+    max-width: 400px;
+}
+
+.image-block img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.info {
+    padding: 15px;
+    background: var(--verde1);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+.info:hover {
+    background-color: #eec925;
+}
+
+.flex-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 10px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.video-destaque {
+    text-align: center;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.video-destaque h1 {
+    color: var(--verde1);
+}
+
+.video-destaque p {
+    text-align: center;
+    max-width: 800px;
+    margin: 10px auto;
+    line-height: 1.6;
+}
+
+.video-destaque iframe {
+    margin-top: 30px;
+    max-width: 100%;
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+.card {
+    background: var(--soft-white);
+    padding: 10px;
+    border-radius: 10px;
+    flex: 1 1 calc(25% - 20px); 
+    max-width: calc(25% - 20px);
+    transition: 0.3s;
+    background-color: var(--verde1);
+    text-align: center;
+    color: var(--verde-claro);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}  
+
+.card:hover { 
+    transform: scale(1.05); 
+}
+
+.contato {
+    text-align: center;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.contato p {
+    text-align: center;
+    max-width: 650px;
+    margin: 20px auto;
+    line-height: 1.6;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: var(--verde);
+    width: 90%;
+    max-width: 500px;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+.contato h2 {
+    text-align: center;
+    color: var(--verde1);
+    margin-bottom: 5px;
+}
+
+.container {
+    color: var(--verde-claro);
+}
+
+.container h2{
+    color: var(--verde-claro);
+}
+
+.row {
+    gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 180px;
+    gap: 5px;
+}
+
+input, select, textarea {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+}
+
+textarea {
+    resize: none;
+    height: 90px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.actions button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.reset {
+    background-color: var(--areia);
+    color: var(--verde);
+}
+
+.reset:hover {
+    background-color: var(--marrom);
+    transform: scale(1.05);
+}
+
+.submit {
+    background-color: var(--verde-claro);
+    color: var(--verde);
+}
+
+.submit:hover {
+    background-color: var(--verde1);
+    transform: scale(1.05);
+}
+
+aside {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-left: 5px solid var(--verde1);
+    max-width: 600px; 
+    margin: 20px auto; 
+    border-radius: 5px; 
+    line-height: 1.6;
+}
+
+aside span {
+    color: var(--verde1);
+    font-weight: bold;
+}
+
+h3 {
+    color: var(--verde1);
+}
+
+footer {
+    background-color: #008080; /* Sua cor atual */
+    color: white;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+}
